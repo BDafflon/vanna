@@ -831,7 +831,7 @@ class VannaBase(ABC):
         user: str = None,
         password: str = None,
         port: int = None,
-        autcommit=False,
+        autocommit=False,
         **kwargs
     ):
         """
