@@ -831,6 +831,7 @@ class VannaBase(ABC):
         user: str = None,
         password: str = None,
         port: int = None,
+        autcommit=False,
         **kwargs
     ):
         """
@@ -903,6 +904,8 @@ class VannaBase(ABC):
                 port=port,
                 **kwargs
             )
+            conn.autocommit = autocommit
+          
         except psycopg2.Error as e:
             raise ValidationError(e)
 
