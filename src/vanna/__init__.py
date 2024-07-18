@@ -66,7 +66,7 @@ import sqlparse
 
 from .exceptions import DependencyError, ImproperlyConfigured, ValidationError
 from .types import TrainingPlan, TrainingPlanItem
-from .utils import validate_config_path
+from .utils import  validate_config_path
 
 
 class VannaBase(ABC):
