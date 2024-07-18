@@ -831,6 +831,7 @@ class VannaBase(ABC):
         user: str = None,
         password: str = None,
         port: int = None,
+        **kwargs
     ):
         """
         Connect to postgres using the psycopg2 connector. This is just a helper function to set [`vn.run_sql`][vanna.base.base.VannaBase.run_sql]
@@ -900,6 +901,7 @@ class VannaBase(ABC):
                 user=user,
                 password=password,
                 port=port,
+                **kwargs
             )
         except psycopg2.Error as e:
             raise ValidationError(e)
